@@ -25,7 +25,6 @@ defmodule HelloNerves.Application do
       # Children that only run on the host
       # Starts a worker by calling: HelloNerves.Worker.start_link(arg)
       # {HelloNerves.Worker, arg},
-      {HelloNerves.Blinker, name: HelloNerves.Blinker},
       {Plug.Cowboy, scheme: :http, plug: HelloNerves.Http, options: [port: 80]}
     ]
   end
@@ -35,7 +34,6 @@ defmodule HelloNerves.Application do
       # Children for all targets except host
       # Starts a worker by calling: HelloNerves.Worker.start_link(arg)
       # {HelloNerves.Worker, arg},
-      {HelloNerves.Blinker, name: HelloNerves.Blinker},
       {Plug.Cowboy, scheme: :http, plug: HelloNerves.Http, options: [port: 80]}
     ]
   end
